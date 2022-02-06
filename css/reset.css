@@ -1,0 +1,46 @@
+/*This file reset base browser styles and include fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+a,
+body,
+div,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+header,
+html,
+iframe,
+img,
+input,
+label,
+li,
+nav,
+object,
+p,
+span,
+ul,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Roboto';
+  vertical-align: baseline;
+  box-sizing: border-box;
+  outline: 0;
+}
+main{
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+html {
+    scroll-behavior: auto; 
+}
