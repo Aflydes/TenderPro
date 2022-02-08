@@ -53,11 +53,41 @@ p,span,a{
 .description{
     width: 50%;
 }
+.slider-arrow:hover use circle{
+    fill: #ff3214;
+}
+.slider-arrow{
+    cursor: pointer;
+}
+.slider-arrow__next{
+    margin-left: 8px;
+    transform: rotate(180deg);
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+}
+.slick-dots li button{
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 50%;
+    color: transparent;
+    background-color: #cccccc;
+    cursor: pointer;
+}
+.slick-dots .slick-active button{
+    background-color: #ff3214;
+}
 /*  Header  */
 .header__container{
     padding: 18px 0px;
     justify-content: space-between;
     align-items: center;
+}
+.header__searchbar{
+    position: relative;
 }
 .header__search{
     padding: 12px 20px;
@@ -67,6 +97,11 @@ p,span,a{
     border: none;
     font-size: 14px;
     color: #969595;
+}
+.header__search-icon{
+    position: absolute;
+    right: 16px;
+    top: 10px;
 }
 .header__menu{
     display: flex;
@@ -248,8 +283,9 @@ p,span,a{
 .reviws__heading{
     margin-bottom: 40px;    
 }
-.reviews__slide{
+.slick-slider .slick-slide.reviews__slide{
     display: flex;
+    margin-right: 64px;
 }
 .reviews__avatar{
     margin-right: 16px;
@@ -262,7 +298,7 @@ p,span,a{
     background-color: #ffffff;
 }
 .reviews__info{
-    max-width: 495px;
+    width: 495px;
 }
 .reviews__name{
     margin-bottom: 4px;
@@ -318,6 +354,9 @@ p,span,a{
     margin-bottom: 8px;
     display: block;
     color: #ffffff;
+}
+.contacts__buttons{
+    width: 100%
 }
 .contacts__write-us{
     position: absolute;
