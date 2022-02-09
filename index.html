@@ -10,12 +10,18 @@
     <!-- Assets -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 				
 </head>
 <body>
     <header class="header">
         <div class="header__container container">
+            <div class="burger lock-animation">
+                <div class="burger__line burger__line-one"></div>
+                <div class="burger__line burger__line-two"></div>
+                <div class="burger__line burger__line-three"></div>
+            </div>
             <div class="header__logo">
                 <object data="img/logo.svg" type="image/svg+xml"></object>
             </div>
@@ -24,6 +30,7 @@
                 <svg class="header__search-icon" height="24" width="24"><use xlink:href="img/icons.svg#search"></use></svg>
             </div>
             <div class="header__menu">
+                <svg class="header__search-black" height="24" width="24"><use xlink:href="img/icons.svg#search-black"></use></svg>
                 <nav class="header__nav">
                     <a href="" class="header__nav-link">о компании</a>
                     <a href="" class="header__nav-link">справка</a>
@@ -56,10 +63,10 @@
         <div class="problem">
             <div class="container">
                 <div class="problem__heading-block heading-block">
-                    <h2 class="problem__heading">Проблема</h2>
+                    <h2 class="problem__heading heading">Проблема</h2>
                 </div>
                 <div class="problem__description description">
-                    <h3 class="problem__subheading">НЕКАЧЕСТВЕННЫЕ ДАННЫЕ</h3>
+                    <h3 class="problem__subheading subheading">НЕКАЧЕСТВЕННЫЕ ДАННЫЕ</h3>
                     <ul class="problem__list">
                         <li class="problem__list-item">Вызывают несогласованность при работе в различных 
                             информационных системах</li>
@@ -77,7 +84,7 @@
         <div class="catalogin">
             <div class="container">
                 <div class="catalogin__heading-block heading-block">
-                    <h2 class="catalogin__heading">Каталогизация</h2>
+                    <h2 class="catalogin__heading heading">Каталогизация</h2>
                 </div>
                 <div class="catalogy__description description">
                     <p class="catalogy__paragraph">Каталогизация материально-технических ресурсов (МТР) — совокупность процессов (идентификация, описание, классификация, унификация, кодификация), обеспечивающих единообразное и однозначное описание МТР.</p>
@@ -89,10 +96,10 @@
         <div class="solution">
             <div class="container">
                 <div class="solution__heading-block heading-block">
-                    <h2 class="solution__heading">Решение</h2>
+                    <h2 class="solution__heading heading">Решение</h2>
                 </div>
                 <div class="solution__description description">
-                    <h3 class="solution_subheading">Центр каталогизации ГК ТендерПро готов создать
+                    <h3 class="solution_subheading subheading">Центр каталогизации ГК ТендерПро готов создать
                         каталог продукции предприятия с нуля или
                         обработать уже имеющийся справочник</h3>
                     <ul class="solution__list">
@@ -111,7 +118,7 @@
         </div>
 
         <div class="approach">
-            <h2 class="approach__heading">Наш подход</h2>
+            <h2 class="approach__heading heading">Наш подход</h2>
             <div class="approach__list">
                 <div class="approach__list-item">
                     <svg height="32" width="32"><use xlink:href="img/icons.svg#whatshot"></use></svg>
@@ -133,7 +140,17 @@
 
         <div class="projects">
             <div class="container">
-                <h2 class="projects__heading">Наши проекты</h2>
+                <h2 class="projects__heading heading">Наши проекты</h2>
+                <div class="project__slider-arrows">
+                    <svg class="slider-arrow slider-arrow__prev project__slider-arrow__prev" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="arrow-circle" cx="20" cy="20" r="19.5" stroke="#969595"/>
+                        <path class="arrow-path" d="M20.0001 26.6667L21.1751 25.4917L16.5251 20.8334L26.6667 20.8334L26.6667 19.1667L16.5251 19.1667L21.1751 14.5084L20.0001 13.3334L13.3334 20L20.0001 26.6667Z" fill="#969595"/>
+                    </svg>
+                    <svg class="slider-arrow slider-arrow__next project__slider-arrow__next" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="arrow-circle" cx="20" cy="20" r="19.5" stroke="#969595"/>
+                        <path class="arrow-path" d="M20.0001 26.6667L21.1751 25.4917L16.5251 20.8334L26.6667 20.8334L26.6667 19.1667L16.5251 19.1667L21.1751 14.5084L20.0001 13.3334L13.3334 20L20.0001 26.6667Z" fill="#969595"/>
+                    </svg>
+                </div>
                 <div class="projects__slider project__slider-disable">
                     <div class="project__slide">
                         <object data="img/teclot.svg" type="image/svg+xml"></object>
@@ -159,13 +176,13 @@
 
         <div class="reviews">
             <div class="container">
-                <h2 class="reviws__heading">Отзывы</h2>
+                <h2 class="reviws__heading heading">Отзывы</h2>
                 <div class="reviews__slider-arrows">
-                    <svg class="slider-arrow slider-arrow__prev" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="slider-arrow slider-arrow__prev reviews__slider-arrow__prev" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle class="arrow-circle" cx="20" cy="20" r="19.5" stroke="#969595"/>
                         <path class="arrow-path" d="M20.0001 26.6667L21.1751 25.4917L16.5251 20.8334L26.6667 20.8334L26.6667 19.1667L16.5251 19.1667L21.1751 14.5084L20.0001 13.3334L13.3334 20L20.0001 26.6667Z" fill="#969595"/>
                     </svg>
-                    <svg class="slider-arrow slider-arrow__next" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="slider-arrow slider-arrow__next reviews__slider-arrow__next" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle class="arrow-circle" cx="20" cy="20" r="19.5" stroke="#969595"/>
                         <path class="arrow-path" d="M20.0001 26.6667L21.1751 25.4917L16.5251 20.8334L26.6667 20.8334L26.6667 19.1667L16.5251 19.1667L21.1751 14.5084L20.0001 13.3334L13.3334 20L20.0001 26.6667Z" fill="#969595"/>
                     </svg>
@@ -220,12 +237,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="slick-dots__appear"></div>
             </div>
         </div>
 
         <div class="contacts">
             <div class="container">
-                <h2 class="contacts__heading">Контакты</h2>
+                <h2 class="contacts__heading heading">Контакты</h2>
                 <div class="contacts__inner-section">
                     <div class="contacts__block">
                         <div class="contact__image">
@@ -267,49 +285,50 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__inner-section">
-                <div class="footer__user-links footer__col">
-                    <div class="footer__logo">
-                        <object data="img/logo.svg" type="image/svg+xml"></object>
-                    </div>
-                    <div class="footer__user-links__block">
-                        <a href="#" class="footer__user-link">Вход</a>
-                        <a href="#" class="footer__user-link">Регистрация</a>
-                        <a href="#" class="footer__user-link">Написать в поддержку</a>
-                    </div>
+                <div class="footer__logo footer__col">
+                    <object data="img/logo.svg" type="image/svg+xml"></object>
                 </div>
                 <div class="footer__usefull-links footer__col">
                     <div class="footer__link-block">
-                        <a href="#" class="footer__usefull-link">Процедуры</a>
-                        <a href="#" class="footer__usefull-link">Товары</a>
-                        <a href="#" class="footer__usefull-link">Новости</a>
+                        <a href="#" class="footer__usefull-link footer__link">Процедуры</a>
+                        <a href="#" class="footer__usefull-link footer__link">Товары</a>
+                        <a href="#" class="footer__usefull-link footer__link">Новости</a>
                     </div>
                     <div class="footer__link-block">
-                        <a href="#" class="footer__usefull-link">Справка</a>
-                        <a href="#" class="footer__usefull-link">О компании</a>
-                        <a href="#" class="footer__usefull-link">Услуги</a>
+                        <a href="#" class="footer__usefull-link footer__link">Справка</a>
+                        <a href="#" class="footer__usefull-link footer__link">О компании</a>
+                        <a href="#" class="footer__usefull-link footer__link">Услуги</a>
+                    </div>
+                </div>
+                <div class="footer__contacts-links footer__col">
+                    <a href="tel:+74952151438" class="footer__phone">+7 (495) 215-14-38</a>
+                    <a href="mailto:client@tender.pro" class="footer__email">client@tender.pro</a>  
+                </div>
+                <div class="footer__user-links footer__col">
+                    <a href="#" class="footer__user-link footer__link">Вход</a>
+                    <a href="#" class="footer__user-link footer__link">Регистрация</a>
+                    <a href="#" class="footer__user-link footer__link">Написать в поддержку</a>
+                </div>
+                <div class="footer__info-links footer__col">
+                    <div class="footer__link-block">
+                        <a href="#" class="footer__usefull-link footer__link">Организаторам</a>
+                        <a href="#" class="footer__usefull-link footer__link">участникам</a>
+                        <a href="#" class="footer__usefull-link footer__link">О системе</a>
                     </div>
                     <div class="footer__link-block">
-                        <a href="#" class="footer__usefull-link">Организаторам</a>
-                        <a href="#" class="footer__usefull-link">участникам</a>
-                        <a href="#" class="footer__usefull-link">О системе</a>
-                    </div>
-                    <div class="footer__link-block">
-                        <a href="#" class="footer__usefull-link">Тарифы</a>
-                        <a href="#" class="footer__usefull-link">Контакты</a>
-                        <a href="#" class="footer__usefull-link">Реквизиты</a>
+                        <a href="#" class="footer__usefull-link footer__link">Тарифы</a>
+                        <a href="#" class="footer__usefull-link footer__link">Контакты</a>
+                        <a href="#" class="footer__usefull-link footer__link">Реквизиты</a>
                     </div> 
                 </div>
+                
                 <div class="footer__contacts footer__col">
-                    <div class="footer__contacts-links">
-                        <a href="tel:+74952151438" class="footer__phone">+7 (495) 215-14-38</a>
-                        <a href="mailto:client@tender.pro" class="footer__email">client@tender.pro</a>
-                    </div>
                     <p class="footer__adress">141707 г. Долгопрудный, МО, 
                         проспект Пацаева, д. 7, корп. 1, оф. 43</p>
                 </div>
             </div>
             <div class="footer__bottom-bar">
-                <div class="footer__col"></div>
+                <div class="footer__col footer__offset"></div>
                 <div class="footer__col">
                     <p class="footer__copyright">ООО «ТендерПро»  Все права защищены и лицензированы</p>
                 </div>
@@ -323,5 +342,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="js/sliders.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
 </body>
 </html>
