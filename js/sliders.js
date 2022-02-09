@@ -19,6 +19,7 @@ $(document).ready(function(){
             }
         ]
     });
+    if ($(window).width() <= '768'){
       $('.projects__slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -28,4 +29,5 @@ $(document).ready(function(){
         prevArrow: '.project__slider-arrow__prev',
         nextArrow: '.project__slider-arrow__next', 
       })
+    }
 });
