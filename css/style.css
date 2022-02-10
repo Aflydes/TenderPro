@@ -22,7 +22,7 @@ h3{
     text-transform: uppercase;
     color: #201d1d;
 }
-p,span,a{
+p,span,a, li{
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -31,6 +31,9 @@ p,span,a{
 }
 .col{
     flex-direction: column;
+}
+.section{
+    padding: 80px 0;
 }
 .container{
     width:calc(100% - 64px);
@@ -50,7 +53,7 @@ p,span,a{
     text-transform: uppercase;
 }
 .heading-block,
-.description{
+.description-block{
     width: 50%;
 }
 .slider-arrow{
@@ -224,10 +227,12 @@ img{
 .offer{
     padding: 146px 12.5%;
     height: 600px;
-    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(/img/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 50%;
+}
+.nsi .offer{
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(/img/bg.png);
 }
 .offer__heading{
     color: #ffffff;
@@ -239,9 +244,6 @@ img{
 }
 
 /*  Problem  */
-.problem{
-    padding: 80px 0;
-}
 .problem__list-item{
     position: relative;
     margin-bottom: 20px;
@@ -267,7 +269,6 @@ img{
 
 /* Catalogin*/
 .catalogin{
-    padding: 84px 0 80px;
     background-color: #232630;
 }
 .catalogin__heading{
@@ -280,30 +281,27 @@ img{
 }
 
 /*  Solution  */
-.solution{
-    padding: 80px 0;
-}
-.solution__ist-item{
+.solution__list-item{
     position: relative;
     margin-bottom: 18px;
     padding-left: 30px;
     white-space: pre-line;
 }
-.solution__ist-item::before,
-.solution__ist-item::after{
+.solution__list-item::before,
+.solution__list-item::after{
     content: "";
     position: absolute;
     height: 2px;
     
     background-color: #008000;
 }
-.solution__ist-item::before{
+.solution__list-item::before{
     width: 9px;
     left: 0.5px;
     top: 12px;
     transform: rotate(45deg);
 }
-.solution__ist-item::after{
+.solution__list-item::after{
     width: 18px;
     left: 5px;
     top: 10px;
@@ -312,7 +310,7 @@ img{
 
 /*  Approach  */
 .approach{
-    padding-top: 80px;
+    padding-bottom: 0;
     background-color: #fbfbfb;
 }
 .approach__heading{
@@ -569,6 +567,101 @@ img{
     color: #969595;
 }
 
+
+
+/*  Marketing  */
+.marketing .offer{
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(/img/bg-marketing.jpg);
+    background-size: 160%;
+    background-position-y: 45%;
+}
+.offer__subheading{
+    margin-top: 16px;
+    max-width: 721px;
+    font-weight: 400;
+    color: #ffffffcc;
+    text-transform: none;
+}
+.description__list-item{
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 12px;
+}
+.description__list-item::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(50% - 2px);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #ff3214;
+}
+
+/*  Result  */
+.result{
+    background-color: #232630;
+}
+.result__heading{
+    color: #ffffff;
+    white-space: pre-line;
+}
+.result__list-item{
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    white-space: pre-line;
+    color: #ffffff;
+}
+.result__list-item::before,
+.result__list-item::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    
+    background-color: #008000;
+}
+.result__list-item::before{
+    width: 9px;
+    left: 0.5px;
+    top: 12px;
+    transform: rotate(45deg);
+}
+.result__list-item::after{
+    width: 18px;
+    left: 5px;
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+/*  Quote  */
+.quote{
+    padding: 130px 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quote__icon{
+    margin-right: 40px;
+    align-self: flex-start;
+}
+.quote__content{
+    max-width: 50%;
+}
+.quote__author{
+    margin-top: 24px;
+    display: flex;
+}
+.quote__author-image{
+    margin-right: 12px;
+    clip-path: circle(45% at 45% 41%);
+}
+.quote__author-post{
+    color: #969595;
+}
+.quote__author-name{
+    font-weight: 700;
+}
 @media screen and (max-width: 1440px){
     .header__bento{
         margin: 0 32px;
@@ -576,6 +669,10 @@ img{
     .offer{
         background-size: unset;
         background-position-y: 35%;
+    }
+    .marketing .offer {
+        background-size: 135%;
+        background-position-y: 52%;    
     }
 }
 @media screen and (max-width: 1140px){
@@ -632,7 +729,9 @@ img{
     }
 }
 @media screen and (max-width: 768px){
-  
+    .section{ 
+        padding: 60px 0;
+    }
     .container{
        width: calc(100% - 48px);
     }
@@ -650,9 +749,11 @@ img{
         height: 688px;
         background-position: 42% 35%;
     }
-    .problem, .catalogin, .solution, .projects, .reviews, .contacts{ padding: 60px 0;}
     .contacts .container{
         width: 100%;
+    }
+    .approach{
+        padding-bottom: 0;
     }
     .approach__list-item__heading{
         font-size: 18px;
@@ -670,6 +771,10 @@ img{
     .footer__phone,
     .footer__email{
         font-size: 16px;
+    }
+    .marketing .offer{
+        background-size: 175%;
+        background-position: 10% 70%;
     }
 }
 @media screen and (max-width: 695px) {
@@ -696,6 +801,9 @@ img{
     }
     p,span,a, li{
         font-size: 14px;
+    }
+    .section{
+        padding: 44px 0;
     }
     .container{
         width: calc(100% - 32px);
@@ -725,7 +833,7 @@ img{
         background-size: cover;
     }
     .heading-block,
-    .description{
+    .description-block{
         width: 100%;
     }
     .heading{
@@ -735,7 +843,7 @@ img{
         margin-bottom: 18px;
     }
     .approach{
-        padding-top: 44px;
+        padding-bottom: 0;
     }
     .slick-slider .slick-slide.reviews__slide{
         display: block;
@@ -800,5 +908,13 @@ img{
     }
     .footer__privacy-policy{
         margin-bottom: 8px;
+    }
+    .marketing .offer{
+        padding: 84px 16px;
+        background-size: cover;
+        background-position: 45%;
+    }
+    .offer__subheading{
+        font-size: 14px;
     }
 }
