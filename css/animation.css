@@ -1,3 +1,6 @@
+._lock-animation > *{
+    animation: none !important;
+}
 .burger__line-one {
     -webkit-animation: animate-line-1-rev 0.7s ease-in-out;
     animation: animate-line-1-rev 0.7s ease-in-out;

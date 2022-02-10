@@ -32,7 +32,7 @@ p,span,a, li{
 .col{
     flex-direction: column;
 }
-.section{
+._padding{
     padding: 80px 0;
 }
 .container{
@@ -92,9 +92,6 @@ p,span,a, li{
 .slick-dots .slick-active button{
     background-color: #ff3214;
 }
-.lock-animation > *{
-    animation: none !important;
-}
 .subheading{
     margin-bottom: 26px;
     white-space: pre-line;
@@ -104,7 +101,7 @@ img{
 }
 
 /*  Header  */
-.header__container{
+.header .container{
     padding: 18px 0px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -148,7 +145,7 @@ img{
     right: 16px;
     top: 10px;
 }
-.header__search-black{
+.header__search-icon--black{
     display: none;
 }
 .header__menu{
@@ -173,7 +170,7 @@ img{
     justify-content: center;
     cursor: pointer;
 }
-.bento_square{
+.bento__square{
     padding: 2px;
     margin: 2px;
     background-color: #201d1d;
@@ -442,8 +439,7 @@ img{
 }
 .contacts__post{
     margin-bottom: 16px;
-    color: #ffffff;
-    opacity: 0.6;
+    color: #ffffff99;
 }
 .contacts__info-text{
     position: relative;
@@ -488,8 +484,7 @@ img{
     background-color: #232630;
 }
 .contacts__write-us p{
-    color: #ffffff;
-    opacity: 0.6;
+    color: #ffffff99;
 }
 .contacts__button{
     margin: 38px auto 32px;
@@ -641,12 +636,19 @@ img{
     align-items: center;
     justify-content: center;
 }
-.quote__icon{
-    margin-right: 40px;
-    align-self: flex-start;
-}
+
 .quote__content{
+    position: relative;
     max-width: 50%;
+}
+.quote__icon{
+    position: absolute;
+    left: -92px;
+    top: -10px; 
+
+ }
+.quote__text{
+    font-size: 20px;
 }
 .quote__author{
     margin-top: 24px;
@@ -662,6 +664,63 @@ img{
 .quote__author-name{
     font-weight: 700;
 }
+
+/*  Callback  */
+.callback{
+    background-color: #232630;
+}
+.callback__heading{
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+.callback__text{
+    color: #ffffff99
+}
+
+.form__group{
+    margin-bottom: 16px;
+    display: inline-block;
+}
+.form__group-name,
+.form__group-phone{
+    width: calc(50% - 13px);
+}
+.form__group-name{
+    margin-right: 22px;
+}
+.form__group-question{
+    width: 100%;
+    min-height: 108px;
+}
+.form__input{
+    margin-top: 4px;
+    padding: 12px 16px;
+    width: 100%;
+    display: block;
+    background-color: #343845;
+}
+.form__input-question{
+    min-height: 108px;
+}
+.form__label{
+    color: #ffffff99;
+}
+.form__group-privacy{
+    margin-top: 8px;
+}
+.form__input-privacy{
+    margin-right: 8px;
+}
+.form__privacy-policy__link{
+    color: #ffffff;
+}
+.form__button{
+    width: 158px;
+    color: #ff3214;
+    background-color: #ffffff;
+}
+
+
 @media screen and (max-width: 1440px){
     .header__bento{
         margin: 0 32px;
@@ -682,7 +741,7 @@ img{
         width: 100%;
         order: 5;
     }
-    .header__search-black{
+    .header__search-icon--black{
         display: block;
         margin-right: 36px;
     }
@@ -708,7 +767,7 @@ img{
     .header__bento{
         margin: 0px 20px;
     }
-    .header__search-black{
+    .header__search-icon--black{
         margin-right: 20px;
     }
     .footer__col{
@@ -729,7 +788,7 @@ img{
     }
 }
 @media screen and (max-width: 768px){
-    .section{ 
+    ._padding{ 
         padding: 60px 0;
     }
     .container{
@@ -776,6 +835,21 @@ img{
         background-size: 175%;
         background-position: 10% 70%;
     }
+    .quote__content{
+        max-width: 576px;
+    }
+    .quote__icon{
+        width: 54px;
+        height: 54px;
+        left: -88px;
+    }
+    .callback .container{
+        flex-wrap: wrap;
+    }
+    .callback__form{
+        margin-top: 36px;
+        width: 100%;
+    }
 }
 @media screen and (max-width: 695px) {
     .approach__list{
@@ -802,7 +876,7 @@ img{
     p,span,a, li{
         font-size: 14px;
     }
-    .section{
+    ._padding{
         padding: 44px 0;
     }
     .container{
@@ -825,7 +899,7 @@ img{
     .header__bento{
         margin: 0 15px;
     }
-    .header__search-black{
+    .header__search-icon--black{
         margin-right: 0;
     }
     .offer{
@@ -916,5 +990,17 @@ img{
     }
     .offer__subheading{
         font-size: 14px;
+    }
+    .quote{
+        padding: 49px 16px 44px 64px;
+    }
+    .quote__icon{
+        left: -48px
+    }
+    .form__group-name, .form__group-phone{
+        width: 100%;
+    }
+    .callback__form{
+        margin-top: 20px;
     }
 }
