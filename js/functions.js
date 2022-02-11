@@ -8,7 +8,7 @@ $(document).ready(function(){
         $('.your-slider').slick('unslick');
     }
 
-    $('.header__search-black').on('click', function(){
+    $('.header__search-icon--black').on('click', function(){
         $('.header__searchbar').show();
         $('.header__search').focus();
     });
@@ -18,8 +18,10 @@ $(document).ready(function(){
     });
 
     $('.burger').on('click', function(){
-        $('.burger').removeClass('lock-animation');
+        $('.burger').removeClass('_lock-animation');
         $('.burger').toggleClass('active');
+        $('body').toggleClass('lock-scroll');
+        $('.mobile-nav').toggleClass('active');
     });
 
 });

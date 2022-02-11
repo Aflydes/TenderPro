@@ -1,4 +1,7 @@
 /*-- Base styles --*/
+.lock-scroll{
+    overflow: hidden;
+}
 h1{
     font-size: 74px;
     font-weight: 700;
@@ -107,17 +110,19 @@ img{
     justify-content: space-between;
     align-items: center;
 }
-.burger{
-    display: none;
-}
 .burger {
+    display: none;
     position: absolute;
     width: 18px;
     height: 12px;
-    top: 24px;
+    top: 30px;
     cursor: pointer;
-    z-index: 5;
+    z-index: 10;
 }
+.header__logo{
+    z-index: 10;
+}
+
 .burger__line {
     height: 2px;
     width: 100%;
@@ -130,6 +135,7 @@ img{
     max-width: 720px;
     width: 33%;
     height: 44px;
+    z-index: 10;
 }
 .header__search{
     padding: 12px 20px;
@@ -147,11 +153,14 @@ img{
 }
 .header__search-icon--black{
     display: none;
+    z-index: 10;
 }
 .header__menu{
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
+
 .header__nav-link{
     margin-right: 36px;
     font-size: 13px;
@@ -169,6 +178,7 @@ img{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 10;
 }
 .bento__square{
     padding: 2px;
@@ -179,6 +189,7 @@ img{
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
+    z-index: 10;
 }
 .breadcrumb{
     position: absolute;
@@ -231,7 +242,7 @@ img{
 .nsi .offer{
     background-image: linear-gradient(to top,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(/img/bg.png);
 }
-.offer__heading{
+.offer__heading-text{
     color: #ffffff;
     white-space: pre-line;
 }
@@ -268,10 +279,10 @@ img{
 .catalogin{
     background-color: #232630;
 }
-.catalogin__heading{
+.catalogin__heading-text{
     color: #ffffff;
 }
-.catalogy__paragraph{
+.catalogin__paragraph{
     max-width: 540px;
     margin-bottom: 16px;
     color: #ffffff;
@@ -310,7 +321,7 @@ img{
     padding-bottom: 0;
     background-color: #fbfbfb;
 }
-.approach__heading{
+.approach__heading-text{
     margin: 0 0 56px 32px;
 }
 .approach__list{
@@ -337,7 +348,7 @@ img{
     flex-direction: column;
     flex-wrap: nowrap;
 }
-.projects__heading{
+.projects__heading-text{
     margin-bottom: 53px;
     color: #ffffff;
 }
@@ -368,7 +379,7 @@ img{
     position: relative;
     overflow: hidden;
 }
-.reviws__heading{
+.reviws__heading-text{
     margin-bottom: 40px;    
 }
 .reviews__slider-arrows{
@@ -411,7 +422,7 @@ img{
 .contacts .container{
     flex-direction: column;
 }
-.contacts__heading{
+.contacts__heading-text{
     margin-bottom: 44px;
     color: #ffffff;
 }
@@ -507,7 +518,8 @@ img{
 .footer__col{
     width: 30%;
 }
-.footer__link:not(:last-of-type){
+.footer__usefull-link:not(:last-of-type),
+.footer__user-link:not(:last-of-type){
     margin-bottom: 8px;
 }
 .footer__user-links,
@@ -525,7 +537,7 @@ img{
 .footer__info-links{
     display: flex;
 }
-.footer__link-block{
+.footer__links-block{
     width: 50%;
 }
 .footer__usefull-link{
@@ -597,7 +609,7 @@ img{
 .result{
     background-color: #232630;
 }
-.result__heading{
+.result__heading-text{
     color: #ffffff;
     white-space: pre-line;
 }
@@ -669,7 +681,7 @@ img{
 .callback{
     background-color: #232630;
 }
-.callback__heading{
+.callback__heading-text{
     margin-bottom: 12px;
     color: #ffffff;
 }
@@ -791,6 +803,27 @@ img{
     ._padding{ 
         padding: 60px 0;
     }
+    .mobile-nav{
+        position: absolute;
+        width: 100%;
+        height: 110%;
+        padding: 150px 40px 0;
+        display: block;
+        left: -500%;
+        top: 0;
+        z-index: 5;
+        background: #ffffff;
+        transition: 1s;
+    }
+    .mobile-nav .header__nav-link{
+        margin-bottom: 30px;
+        display: block;
+        font-size: 32px;
+    }
+    .mobile-nav.active{
+        left: 0;
+        transition: 1s;
+    }
     .container{
        width: calc(100% - 48px);
     }
@@ -799,9 +832,6 @@ img{
     }
     .burger{
         display: block;
-    }
-    .header__nav{
-        display: none;
     }
     .offer{
         padding: 146px 24px;
@@ -821,8 +851,11 @@ img{
     .project__slide {
         margin-right: 58px;
     }
-    .contacts__heading{
+    .contacts__heading-text{
         margin-left: 24px;
+    }
+    .contact__image{
+        max-width: 70px;
     }
     .footer__usefull-link{
         font-size: 12px;
@@ -858,6 +891,9 @@ img{
     .approach__list-item{
         width: 100%;
         padding: 16px;
+    }
+    .contacts__block{
+        width: 100%;
     }
 }
 @media screen and (max-width: 560px) {
@@ -924,9 +960,6 @@ img{
     }
     .reviews__info{
         max-width: 288px;
-        width: 100%;
-    }
-    .contacts__block{
         width: 100%;
     }
     .contact__image{
